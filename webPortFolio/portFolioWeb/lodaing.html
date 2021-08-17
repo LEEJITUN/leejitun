@@ -1,127 +1,460 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>LOADING PAGE</title>
-    <meta http-equiv="refresh" content="10; url=/webPortFolio/portFolioWeb/home.html"> 
-    <link rel="stylesheet" href="./css/stroke.css">
-    <link rel="stylesheet" href="./css/neon.css">
-    <script src="./js/stroke.js"></script>
-    
-</head>
-<body>
+@charset "utf-8";
 
-<div class="loader">                  
-    <svg class = "svg_main" version="1.0" xmlns="http://www.w3.org/2000/svg"
-    width="1000pt" height="1000pt" viewBox="0 0 700.000000 1000.000000"
-    preserveAspectRatio="xMidYMid meet";>
+main{font-family: 'Nanum Gothic', sans-serif;}
 
-        <g id="logo" transform="translate(0.000000,600.000000) scale(0.100000,-0.100000)" fill= "#DCCBED">
+/* header */
+header{
+    width: 100%; min-width: 1200px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    font-family: 'Nanum Gothic', sans-serif;
+    position: absolute;
+    left: 0; 
+    top: 0;
+    z-index: 1
+}
+.header-wrap{
+    width: 1200px; 
+    height: 130px; 
+    margin: 0 auto
+}
+.header-wrap h1{
+    float: left;
+    width: 200px; 
+    height: 53px; 
+    margin: 39px 0
+}
+.header-wrap h1>a{
+    display: block; 
+    width: 100%; 
+    font-size: 22px;
+    color: #fff;
+    height: 69px;
+    text-indent: -9999px
+}
 
-        <path  d="M963 1917 c-307 -148 -539 -499 -432 -653 43 -61 70 -55 57 13 -23
-        113 199 389 440 546 194 127 214 81 125 -288 l-47 -195 -155 -161 c-271 -285
-        -339 -601 -139 -651 187 -47 352 311 517 1120 65 319 -66 415 -366 269z m58
-        -861 c-110 -366 -167 -469 -231 -416 -81 67 -8 285 161 476 116 131 125 124
-        70 -60z"/>      
-        
-        <path  d=" M1439 1619 c-18 -35 -17 -50 8 -75 40 -40 98 2 89 64 -8 57 -68 64 -97  11z " />     
+#gnb{
+    float: right;
+    height: 130px
+}
+#gnb>ul{}
+#gnb>ul>li{float: left}
+#gnb>ul>li+li{padding-left: 25px}
+#gnb>ul>li>a{
+    opacity: 0.8;
+    font-size: 16px;
+    color: #fff; 
+    line-height: 130px
+}
+#gnb>ul>li:hover a{
+    opacity: 1; color: #fff; 
+    transition: all 0.3s 0s;
+    text-decoration: none
+}
 
-        <path  d="M3002 1465 c-40 -41 -86 -96 -103 -121 -28 -45 -29 -43 -29 50 0 90
-        -3 96 -55 102 -49 6 -55 0 -55 -51 0 -95 -49 -229 -127 -351 -122 -191 -143
-        -142 -68 151 34 133 39 184 23 210 -46 73 -79 51 -104 -71 -24 -115 -185 -404
-        -226 -404 -30 0 -21 97 23 244 54 182 47 264 -23 272 -49 6 -53 0 -64 -97 -12
-        -99 -67 -217 -149 -318 -39 -48 -39 -47 -11 130 32 203 25 259 -37 276 -64 16
-        -77 0 -77 -94 0 -96 -67 -245 -157 -353 -86 -102 -92 -69 -29 168 59 225 54
-        276 -26 288 -33 5 -42 -14 -63 -124 -14 -75 -54 -179 -94 -247 -140 -240 -181
-        -204 -113 99 35 156 40 205 21 227 -47 57 -72 27 -115 -139 -95 -361 -19 -521
-        158 -330 50 55 72 68 65 42 -39 -147 98 -160 220 -21 l90 103 -20 -87 c-14
-        -65 -49 -119 -136 -209 -195 -204 -277 -433 -184 -517 138 -125 315 90 414
-        507 25 102 56 174 98 224 l61 74 10 -94 c14 -133 90 -144 197 -28 70 76 73 78
-        76 31 9 -158 151 -131 268 51 l31 48 0 -71 c0 -76 35 -135 80 -135 20 0 28 26
-        28 87 0 102 86 287 188 404 95 110 103 81 31 -113 -91 -247 -82 -378 25 -378
-        73 0 329 356 285 397 -8 7 -18 4 -22 -7 -23 -58 -180 -298 -200 -304 -46 -15
-        -41 51 15 225 101 314 48 426 -120 254z m-1233 -786 c-68 -202 -130 -308 -185" />  
+.indicator{
+    margin-top: -92px;
+    position: fixed;
+    top: 50%; 
+    right: 50px; 
+    z-index: 2;
+}
+.indicator>li{
+    width: 12px;
+    height: 12px;
+    opacity: 0.1;
+    position: relative;
+    margin-bottom: 14px;
+    border-radius: 30%;
+    background-color: #111;
+    transition: all 0.3s 0s
+}
+.indicator>li>a{
+    display: block;
+    width: 12px;
+    height: 12px; 
+    opacity: 0;
+    transition: all 0.3s
+}
+.indicator>li>a>span{
+    display: block; 
+    width: 120px; 
+    height: 20px;
+    font-size: 12px; 
+    color: #333; 
+    text-align: right;
+    letter-spacing: 1px;
+    position: absolute; 
+    right: 20px; top: 0;
+}
+.indicator>li:hover{opacity: 0.8; transform: scale(1.1)}
+.indicator>li:hover a{opacity: 0.8}
+.indicator>li.on{opacity: 0.8}
+.indicator>li.on a{opacity: 0.8; font-weight: 600}
 
-        <path  d="M4534 1940 c-64 -51 -134 -199 -195 -415 -50 -177 -72 -199 -180
-        -175 -214 47 -155 490 65 490 42 0 58 -12 68 -50 15 -60 48 -66 48 -9 0 122
-        -198 183 -310 96 -223 -176 -139 -547 129 -572 66 -7 101 -19 101 -37 0 -33
-        -95 -330 -115 -362 -15 -22 -127 -74 -134 -62 -1 3 -11 33 -22 66 -47 142
-        -284 99 -313 -57 -45 -239 321 -313 538 -109 104 97 666 -185 666 -335 0 -48
-        38 -33 52 21 39 156 -219 367 -526 431 l-106 22 29 55 c16 30 48 130 71 223
-        40 155 52 177 168 300 187 198 266 378 211 480 -29 55 -175 54 -245 -1z m202
-        -87 c9 -104 -98 -291 -225 -393 -36 -29 -37 -26 -23 50 56 309 231 552 248
-        343z m-788 -958 c17 -28 14 -50 -14 -98 -43 -75 -33 -92 29 -49 74 51 112 41
-        59 -16 -91 -97 -221 -77 -250 37 -31 125 112 227 176 126z"/>
 
-        <path  d="M4755 1473 c-144 -134 -203 -469 -98 -555 92 -74 224 -32 321 102 59
-        82 82 84 82 9 0 -177 227 -196 355 -29 43 57 165 269 165 287 0 30 -38 10 -49
-        -25 -57 -179 -250 -365 -303 -292 -61 83 -37 141 83 200 124 60 184 148 162
-        236 -49 193 -275 138 -373 -91 -139 -323 -340 -485 -340 -275 0 71 7 80 90
-        120 157 76 215 207 139 316 -44 62 -165 61 -234 -3z m225 -115 c0 -63 -70
-        -146 -144 -169 -59 -19 -63 -1 -17 90 83 161 161 200 161 79z m460 -7 c0 -61
-        -128 -171 -199 -171 -27 0 48 153 105 215 47 52 94 30 94 -44z"/>
-        </g>
-    </svg>
+/* video */
+#video{
+    min-width: 1200px; 
+    max-height: 100vh;
+    overflow: hidden; 
+    position: relative
+}
+#video>video{
+    width: 100%; 
+    min-width: 1200px;
+    filter: brightness(0.9)
+}
+#video>div{
+    width: 1200px;
+    margin-right: -600px;
+    position: absolute; 
+    top: 400px; 
+    right: 50%;
+}
+#video>div>p{
+    font-family: 'Oswald',sans-serif;
+    color: #fff; 
+    text-align: center
+}
+#video .video-tit{
+    font-size: 22px; 
+    font-style: italic; 
+    line-height: 40px; 
+    font-weight: 200; 
+    letter-spacing: 3px; 
+    margin-bottom: 15px; 
+    opacity: 0.8
+}
 
-            
+#video .video-desc{
+    font-size: 80px;
+    line-height: 100px;
+    letter-spacing: 8px;
+    margin-bottom: 20px
+}
+#video .video-desc em{color: #ffba46;}
+#video .video-desc:after {
+    content: '';
+    display: block; 
+    margin: 50px auto 0 auto;
+    width: 100px;
+    height: 2px; background: #fff;
+}
+#video .txt-rotate{
+    display: block; 
+    text-align: center;
+}
+#video .txt-rotate>.wrap{ 
+    font-family: 'Nanum Gothic', sans-serif; 
+    font-size: 16px;
+    line-height: 60px; 
+    color: #eee;
+    letter-spacing: 2px
+}
+.scroll-txt{
+    display: block;
+    padding-bottom: 55px;
+    font-size: 14px;
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    z-index: 1;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);    
+}
 
-    <svg class="signature" version="1.0" xmlns="http://www.w3.org/2000/svg"
-     width="1000pt" height="1000pt" viewBox="0 0 700.000000 1000.000000"
-     preserveAspectRatio="xMidYMid meet">
+.scroll-txt:after {
+    content: '';
+    display: block;
+    width: 1px; 
+    height: 50px; 
+    margin-left: -1px;
+    position: absolute; 
+    bottom: 0;
+    left: 50%;    
+    background: #fff;
+}
 
-        <g class="signature__inner" transform="translate(0.000000,600.000000) scale(0.100000,-0.100000)">
+/* common */
+.tit{
+    margin: 0 auto 10px auto;
+    padding-top: 100px;
+    font-size: 30px; 
+    color: #333; 
+    text-align: center; 
+    letter-spacing: 1px
+}
+.desc{
+    display: block; 
+    margin-bottom: 50px;
+    opacity: 0.7;
+    font-size: 16px; 
+    line-height: 24px; 
+    letter-spacing: -1px;
+    text-align: center
+}
 
-        <path class = "signature__path1" d="M963 1917 c-307 -148 -539 -499 -432 -653 43 -61 70 -55 57 13 -23
-        113 199 389 440 546 194 127 214 81 125 -288 l-47 -195 -155 -161 c-271 -285
-        -339 -601 -139 -651 187 -47 352 311 517 1120 65 319 -66 415 -366 269z m58
-        -861 c-110 -366 -167 -469 -231 -416 -81 67 -8 285 161 476 116 131 125 124 70 -60z"/>      
+/* about */
+#about{width: 1200px; margin: 0 auto}
+#about .about-desc{width: 700px; margin: 0 auto}
+#about .image{
+    float: left; 
+    display: block;
+    width: 350px; 
+    height: 500px; 
+    margin-right: 100px;
+    background: url(../img/cin.jpg) no-repeat center center;
+    background-size: contain;
+    text-indent: -9999px
 
-         <path class = "signature__path2" d=" M1439 1619 c-18 -35 -17 -50 8 -75 40 -40 98 2 89 64 -8 57 -68 64 -97  11z"/>     
+}
+#about .mainbox{
+    float: left; 
+    display: block;
+    width: 350px; 
+    height: 150px; 
+    margin-left: 100px;
+    margin-bottom:90px;
+    margin-top: 25px;
+}
+.mainbox h2{
+    font-size: 26px;
+    font-weight: bold; 
+    margin-bottom: 20px;
+}
 
-        <path class = "signature__path3" d="M3002 1465 c-40 -41 -86 -96 -103 -121 -28 -45 -29 -43 -29 50 0 90
-        -3 96 -55 102 -49 6 -55 0 -55 -51 0 -95 -49 -229 -127 -351 -122 -191 -143
-        -142 -68 151 34 133 39 184 23 210 -46 73 -79 51 -104 -71 -24 -115 -185 -404
-        -226 -404 -30 0 -21 97 23 244 54 182 47 264 -23 272 -49 6 -53 0 -64 -97 -12
-        -99 -67 -217 -149 -318 -39 -48 -39 -47 -11 130 32 203 25 259 -37 276 -64 16
-        -77 0 -77 -94 0 -96 -67 -245 -157 -353 -86 -102 -92 -69 -29 168 59 225 54
-        276 -26 288 -33 5 -42 -14 -63 -124 -14 -75 -54 -179 -94 -247 -140 -240 -181
-        -204 -113 99 35 156 40 205 21 227 -47 57 -72 27 -115 -139 -95 -361 -19 -521
-        158 -330 50 55 72 68 65 42 -39 -147 98 -160 220 -21 l90 103 -20 -87 c-14
-        -65 -49 -119 -136 -209 -195 -204 -277 -433 -184 -517 138 -125 315 90 414
-        507 25 102 56 174 98 224 l61 74 10 -94 c14 -133 90 -144 197 -28 70 76 73 78
-        76 31 9 -158 151 -131 268 51 l31 48 0 -71 c0 -76 35 -135 80 -135 20 0 28 26
-        28 87 0 102 86 287 188 404 95 110 103 81 31 -113 -91 -247 -82 -378 25 -378
-        73 0 329 356 285 397 -8 7 -18 4 -22 -7 -23 -58 -180 -298 -200 -304 -46 -15
-        -41 51 15 225 101 314 48 426 -120 254z m-1233 -786 c-68 -202 -130 -308 -185" />  
+#about .box{
+    float: left; 
+    display: block;
+    width: 150px; 
+    height: 200px; 
+    margin-right: auto;
+}
 
-        <path class = "signature__path4" d="M4534 1940 c-64 -51 -134 -199 -195 -415 -50 -177 -72 -199 -180
-        -175 -214 47 -155 490 65 490 42 0 58 -12 68 -50 15 -60 48 -66 48 -9 0 122
-        -198 183 -310 96 -223 -176 -139 -547 129 -572 66 -7 101 -19 101 -37 0 -33
-        -95 -330 -115 -362 -15 -22 -127 -74 -134 -62 -1 3 -11 33 -22 66 -47 142
-        -284 99 -313 -57 -45 -239 321 -313 538 -109 104 97 666 -185 666 -335 0 -48
-        38 -33 52 21 39 156 -219 367 -526 431 l-106 22 29 55 c16 30 48 130 71 223
-        40 155 52 177 168 300 187 198 266 378 211 480 -29 55 -175 54 -245 -1z m202
-        -87 c9 -104 -98 -291 -225 -393 -36 -29 -37 -26 -23 50 56 309 231 552 248
-        343z m-788 -958 c17 -28 14 -50 -14 -98 -43 -75 -33 -92 29 -49 74 51 112 41
-        59 -16 -91 -97 -221 -77 -250 37 -31 125 112 227 176 126z"/>
+.introduce{
+    float: left;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px
+}
 
-        <path class = "signature__path5" d="M4755 1473 c-144 -134 -203 -469 -98 -555 92 -74 224 -32 321 102 59
-        82 82 84 82 9 0 -177 227 -196 355 -29 43 57 165 269 165 287 0 30 -38 10 -49
-        -25 -57 -179 -250 -365 -303 -292 -61 83 -37 141 83 200 124 60 184 148 162
-        236 -49 193 -275 138 -373 -91 -139 -323 -340 -485 -340 -275 0 71 7 80 90
-        120 157 76 215 207 139 316 -44 62 -165 61 -234 -3z m225 -115 c0 -63 -70
-        -146 -144 -169 -59 -19 -63 -1 -17 90 83 161 161 200 161 79z m460 -7 c0 -61
-        -128 -171 -199 -171 -27 0 48 153 105 215 47 52 94 30 94 -44z"/>
-        </g>
-    </svg>
+/* skillbar */
+#about .skill{
+    float: inherit; 
+    width: 300px;
+    height: 500px;
+    margin-bottom: 100px;
+    margin-top: 95px;
+    margin-left: 900px;
+ 
+}
 
-     <svg class = "svg_main" version="1.0" xmlns="http://www.w3.org/2000/svg"
-     width="1000pt" height="1000pt" viewBox="0 0 700.000000 1000.000000"
-     preserveAspectRatio="xMidYMid meet">
+.skill h2{
+    font-size: 26px;
+    font-weight: bold; 
+    margin-bottom: 20px;
+}
+.skill p{
+    display: inline-block;
+    width: 300px;
+    margin-bottom: 0;
+    color: #333;
+    font-weight: bold;
+    text-align: initial;
+    font-size: 12px;
+}
+.skillbar {
+	position:relative;
+	display:block;
+	margin-bottom:20px;
+	width:350px;
+    height:25px;
+	background:#eee;
+	border-radius:10px;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	-webkit-transition:0.4s linear;
+	-moz-transition:0.4s linear;
+	-ms-transition:0.4s linear;
+	-o-transition:0.4s linear;
+	transition:0.4s linear;
+	-webkit-transition-property:width, background-color;
+	-moz-transition-property:width, background-color;
+	-ms-transition-property:width, background-color;
+	-o-transition-property:width, background-color;
+	transition-property:width, background-color;
+}
 
-        <use xlink:href="#logo" class="neon-wash" stroke="#fff" />
-    </svg> 
-</div>
-</body>
-</html>
+.skillbar-bar {
+    width: 0px;
+	height: 25px;
+    background-color: #6482FF;	
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+}
+.skill-bar-percent {
+	position:relative;
+    height:20px;
+	font-size:12px;
+	text-align: right;
+	line-height:20px;
+	color:rgba(0, 0, 0, 0.4);
+}
 
+/* Java Swing */
+#javaSwing{
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    background: url(../img/back1.png) no-repeat 0 0;
+}
+
+.javaSwing-desc{
+    width: 1000px;
+    margin: 0 auto;
+}
+.javaSwing-desc1{
+    float: left; 
+    display: block; 
+    padding-right: 
+}
+.javaSwing-desc2{
+    float: right;
+    display: block;
+}
+.javaSwing-desc3{
+    float: left;
+    display: block;
+}
+.javaSwing-desc4{
+    float: right;
+    display: block;
+}
+
+
+.javaSwing-desc img{
+    width: 420px;
+    height: 320px;
+}
+.thumb-img{
+    transition: all 0.3s 0s
+}
+.thumb-img:hover{transform: scale(1.02)}
+.thumb-img>img{box-shadow: 5px 5px 10px rgba(0,0,0,0.3);}
+.thumb-txt{display: inline-block}
+.thumb-txt>p{
+    display: block; 
+    margin-bottom: 5px;
+    font-size: 26px;
+    font-weight: 600;
+    color: #72726c;
+    line-height: 30px;
+     margin-top: 10px;
+}
+.thumb-txt>em{
+    display: inline-block;
+    margin-bottom: 20px; height: 16px;
+    font-size: 16px; 
+    color: rgba(51, 51, 51, 0.6); 
+    line-height: 16px; 
+     margin-top: 10px;
+}
+.thumb-btn{
+    display: block; 
+    float: right;
+    width: 140px;
+    height: 40px;
+    font-size: 16px; 
+    color: rgba(51, 51, 51, 0.6); 
+    line-height: 40px; 
+    text-align: center;
+    margin-top: 10px;
+    border: 1px solid rgba(51, 51, 51, 0.6)
+}
+.thumb-btn:hover{background-color: rgba(51, 51, 51, 0.6); border: 0}
+.thumb-btn:hover a{color: #deeeed; text-decoration: none}
+
+
+/* footer */
+footer{
+    width: 100%; 
+    height: 450px; 
+    min-width: 1200px;
+    font-family: 'Nanum Gothic', sans-serif;
+    background-size: cover;
+    position: relative
+}
+
+footer>div{width: 100%; height: 450px;
+    background-color: rgba(0,0,0,0)
+}
+#footer{
+    float: inherit;
+    width: 100%; 
+    margin: 0 auto;
+    box-sizing: border-box;
+    color: #000;
+    position: relative; 
+    top: 0px;
+    border-top:1px solid #d3d3d3;
+}
+.contactme{
+    height: 26px;
+    font-size: 34px;
+    font-weight: 200;
+    line-height: 26px;
+    margin-top: 70px;
+    text-align: center
+}
+.infoMainBox{
+    width: 100%; 
+    height: 120px; 
+    margin-bottom:180px;
+    margin-top: 20px; 
+    transform: translate(40%,25%);
+}
+.infoBox{
+    float: left;
+    width: 250px; 
+    height: 100%; 
+}
+.tailBox{
+    float: inherit;
+    width: 100%;
+    min-width: 1200px; 
+    height: 60px;
+    background: #212121;
+    text-align: center;
+}
+.infoBox h2{
+    font-size: 26px;
+    font-weight: bold; 
+}
+.infoBox p{
+    font-size: 18px;
+}
+
+#footer hr{
+    width:100%;
+    height:2px; 
+}
+.image{
+    float: left; 
+    display: block;
+    width: 300px; 
+    height: 200px; 
+    margin-right: 10px;
+    background: url(../img/cin3.png) no-repeat center center;
+    background-size: contain;
+    text-indent: -9999px
+}
+#footer>address{
+    margin-top: 40px;
+    font-size: 16px; color: rgba(255,255,255,0.6); line-height: 22px; text-align: center
+}
+#footer>p:nth-of-type(2){
+    margin-top: 115px;
+    font-size: 16px; color: rgba(255,255,255,0.4); line-height: 22px; text-align: center
+} 
