@@ -59,7 +59,7 @@ window.onload = function() {
     
    setTimeout(function() {
     autograph();
-   }, 2000);
+   }, 0.5000);
 };
 
 
