@@ -1,0 +1,64 @@
+body {
+    background-color: #DCCBED;
+}
+
+.loader {
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    margin-top: -10px;
+    margin-left: -300px;
+    width: 1200px;
+    height: 100%; 
+}
+
+.signature {
+    width: 800px;
+    height: 100%;
+    position:absolute;
+}
+
+.signature__inner {
+    fill: none;
+    visibility:hidden;
+}
+
+.signature__path1 {
+/*   stroke: #fdc95d;*/
+   stroke:  #fff;
+   stroke-width: 35;
+   stroke-linecap: round;
+   stroke-linejoin: round; 
+}
+
+.signature__path2 {
+    stroke: #fff;
+    stroke-width: 35;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.signature__path3 {
+    stroke:  #fff  ;
+    stroke-width: 35;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+.signature__path4 {
+    stroke:  #fff ;
+    stroke-width: 35;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+.signature__path5 {
+    stroke:  #fff;
+    stroke-width: 35;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    
+}
+
+.test{
+    width: auto;
+    height: auto;
+}
