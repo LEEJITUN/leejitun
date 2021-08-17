@@ -1,236 +1,127 @@
-
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">       
-    <meta http-equiv="page-enter" content="blendTrans(duration=0.3)">
-    <meta http-equiv="page-exit" content="blendTrans(duration=0.3)">
-    <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/webfont.css">
-    <link rel="stylesheet" href="./css/main.css">
-    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./bootstrap/css/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <script src="./js/jquery-3.2.1.min.js"></script>
-    <script src="./bootstrap/js/bootstrap.min.js"></script>
-    <script src="./js/scroll.js"></script>
+    <title>LOADING PAGE</title>
+    <meta http-equiv="refresh" content="10; url=/webPortFolio/portFolioWeb/home.html"> 
+    <link rel="stylesheet" href="./css/stroke.css">
+    <link rel="stylesheet" href="./css/neon.css">
+    <script src="./js/stroke.js"></script>
     
-    <title>이지윤 Portfolio</title>
 </head>
 <body>
-    <header>
-        <section>
-            <div class="header-wrap">
-                <h1><a href="http://jiyuncin.com/">LEE JI YUN</a></h1>
-                <nav id="gnb">
-                    <ul>
-                        <li><a href="#">ABOUT</a></li>
-                        <li><a href="#">JAVA</a></li>
-                        <li><a href="#">CONTACT</a></li>
-                    </ul>
-                </nav>
-            </div>            
-            <ul class="indicator">
-                <li class="on"><a href="#"><span>TOP</span></a></li>
-                <li><a href="#"><span>ABOUT</span></a></li>
-                <li><a href="#"><span>JAVA</span></a></li>
-                <li><a href="#"><span>CONTACT</span></a></li>
-            </ul>
-        </section>
-    </header>
-    <main>
-        <h2 class="hidden">이지윤 포트폴리오</h2>
-        <section id="video">            
-            <video muted preload="auto" loop autoplay="autoplay"> 
-	            <source src="mov/vi_im.mp4" type="video/mp4" />
-	            <source src="mov/vi_im.webm" type="video/webm">
-	            <source src="mov/vi_im.ogv" type="video/ogv">
-            </video>
-            <div>                
-                <p class="video-tit">Developer Portfolio </p>
-                <p class="video-desc">J I Y U N <em>.</em> L E E</p>
-                <span class="txt-rotate" data-period="2000" data-rotate='["소통을 중요시 여기는", "개발자 이지윤입니다."]'></span>
-            </div>
-            <span class="scroll-txt">SCROLL DOWN</span>
-        </section>
-        <section id="about">
-            <h3 class="tit"><b>ABOUT </b><em>ME</em></h3>
-            <p class="desc">개발자 이지윤</p>
-            <p class="image">사진부분</p>
-            <div class = "mainbox">
-               <h2><b>PROFILE</b></h2>
-                <div class = "box">
-                    <p><b>NAME</b>
-                    <p><b>AGES</b>
-                    <p><b>ADDRESS</b>
-                    <p><b>EMAIL</b>
-                </div>
-                <div class = "box"> 
-                    <p><b>이지윤</b></p>
-                    <p><b>27(1995.02.24)</b></p>
-                    <p><b>부산광역시 동래</b></p>
-                    <p><b>ekfhxxxx@naver.com</b></p>
-                </div>
-            </div>
-            <div class = "mainbox">
-              <h2><b>LICENSE</b></h2>
-                    <div class="box">
-                        <p><b>2019.8</b>
-                        <p><b>2019.9</b>
-                        <p><b>2019.4</b>
-                        <p><b>2020.10</b>
-                    </div>
-                    <div class="box">
-                        <p><b>리눅스마스터2급</b></p>
-                        <p><b>네트워크관리사2급</b></p>
-                        <p><b>코딩교육지도사(엔트리)</b></p>
-                        <p><b>정보처리기사(예정)</b></p>
-                    </div>
-            </div>
 
-               <div class="skill">
-                    <h2><b>MY ABILITIES</b></h2>             
-                    <p>JAVA</p>
-                    <div class="skillbar clearfix " data-percent="90%">
-                    	<div class="skillbar-title"></div>
-                    	<div class="skillbar-bar" style="width: 90%;"></div>
-                    	<div class="skill-bar-percent">90%</div>
-                    </div>
-                    <p>JavaScript</p>
-                    <div class="skillbar clearfix " data-percent="90%">
-                    	<div class="skillbar-title"></div>
-                    	<div class="skillbar-bar" style="width: 90%;"></div>
-                    	<div class="skill-bar-percent">90%</div>
-                    </div> <!-- End Skill Bar -->
-                    <p>SQL</p>
-                    <div class="skillbar clearfix " data-percent="90%">
-                    	<div class="skillbar-title"></div>
-                    	<div class="skillbar-bar" style="width: 90%;"></div>
-                    	<div class="skill-bar-percent">90%</div>
-                    </div> <!-- End Skill Bar -->
-                    <p>JQuery</p>
-                    <div class="skillbar clearfix " data-percent="80%">
-                    	<div class="skillbar-title"></div>
-                    	<div class="skillbar-bar" style="width: 80%;"></div>
-                    	<div class="skill-bar-percent">70%</div>
-                    </div> <!-- End Skill Bar -->
-                    <p>HTML5</p>
-                    <div class="skillbar clearfix " data-percent="80%">
-                    	<div class="skillbar-title"></div>
-                    	<div class="skillbar-bar" style="width: 80%;"></div>
-                    	<div class="skill-bar-percent">70%</div>
-                    </div> <!-- End Skill Bar -->
-                </div>
-  
-        </section>
+<div class="loader">                  
+    <svg class = "svg_main" version="1.0" xmlns="http://www.w3.org/2000/svg"
+    width="1000pt" height="1000pt" viewBox="0 0 700.000000 1000.000000"
+    preserveAspectRatio="xMidYMid meet";>
+
+        <g id="logo" transform="translate(0.000000,600.000000) scale(0.100000,-0.100000)" fill= "#DCCBED">
+
+        <path  d="M963 1917 c-307 -148 -539 -499 -432 -653 43 -61 70 -55 57 13 -23
+        113 199 389 440 546 194 127 214 81 125 -288 l-47 -195 -155 -161 c-271 -285
+        -339 -601 -139 -651 187 -47 352 311 517 1120 65 319 -66 415 -366 269z m58
+        -861 c-110 -366 -167 -469 -231 -416 -81 67 -8 285 161 476 116 131 125 124
+        70 -60z"/>      
         
-        <section id="javaSwing">
-           <div>
-            <h3 class="tit"><b>JAVA</b></h3>
-                <p class="desc">JAVA를 활용한 개발</p>
-                <div class="javaSwing-desc">
-                       
-                   <dl class="javaSwing-desc1">
-                        <dd class="thumb-img"><img src="./img/TodayFood.jpg" alt=""></dd>
-                        <dd class="thumb-txt"><p>오늘 뭐 먹지</p><em>java swing project</em></dd>
-                        <dd class="thumb-btn">
-                            <a href="#" data-toggle="modal" data-target="#g01">실행</a>
-                        </dd>
-                    </dl>
-                    <dl class="javaSwing-desc2">
-                        <dd class="thumb-img"><img src="./img/cin4.jpg" alt=""></dd>
-                        <dd class="thumb-txt"><p>예정</p><em></em></dd>
-                    </dl>
-                    <dl class="javaSwing-desc3">
-                        <dd class="thumb-img"><img src="./img/cin6.jpg" alt=""></dd>
-                        <dd class="thumb-txt"><p>예정</p><em></em></dd>
-                    </dl>
-                    
-                    <dl class="javaSwing-desc4">
-                        <dd class="thumb-img"><img src="./img/cin7.jpg" alt=""></dd>
-                        <dd class="thumb-txt"><p>예정</p><em></em></dd>
-                    </dl>
-               </div>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <div>
-            <section id="footer">
-                <p class="contactme"><b>Contact</b> me</p>
-                <div class="infoMainBox">
-                <div class = "image"></div>
-                   <div class="infoBox">
-                        <h2>이지윤</h2>
-                        <p>Lee ji yun</p>
-                        <br><br>
-                        <p>E-mail &emsp;ekfhxxxx@naver.com</p>
-                        <p>Phone &emsp; +82 10-xxxx-xxxx</p>
-                    </div>
-                </div>     
-        </section>
-        <section>
-            <div class="tailBox">
-            <br>
-             <p style="color: aliceblue;">copyright. 2021 by JI YUN LEE. all rights reserved.</p>
-            </div>
-        </section>
-        </div>
-    </footer>
-    
-    <script>
-        
-    var TxtRotate = function(el, toRotate, period) {
-        this.toRotate = toRotate;
-        this.el = el;
-        this.loopNum = 0;
-        this.period = parseInt(period, 10) || 2000;
-        this.txt = '';
-        this.tick();
-        this.isDeleting = false;
-    };
-    TxtRotate.prototype.tick = function() {
-        var i = this.loopNum % this.toRotate.length;
-        var fullTxt = this.toRotate[i];
-        if (this.isDeleting) {
-          this.txt = fullTxt.substring(0, this.txt.length - 1);
-        } else {
-          this.txt = fullTxt.substring(0, this.txt.length + 1);
-        }
-        this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
-        var that = this;
-        var delta = 150 - Math.random() * 100;
-        if (this.isDeleting) { delta /= 2; }
-        if (!this.isDeleting && this.txt === fullTxt) {
-            delta = this.period;
-            this.isDeleting = true;
-        } else if (this.isDeleting && this.txt === '') {
-            this.isDeleting = false;
-            this.loopNum++;
-            delta = 500;
-        }
-        setTimeout(function() {
-            that.tick();
-        }, delta);
-    };
-    window.onload = function() {
-        var elements = document.getElementsByClassName('txt-rotate');
-        for (var i=0; i<elements.length; i++) {
-        var toRotate = elements[i].getAttribute('data-rotate');
-        var period = elements[i].getAttribute('data-period');
-            if (toRotate) {
-                new TxtRotate(elements[i], JSON.parse(toRotate), period);
-            }
-        }
-    setTimeout(function(){
-        window.scrollTo(0,0);
-    }, 0);
-        var css = document.createElement("style");
-        css.type = "text/css";
-        css.innerHTML = ".txt-rotate > .wrap { border-right: 0.04em solid #fff }";
-        document.body.appendChild(css);
-    }
-    </script>
+        <path  d=" M1439 1619 c-18 -35 -17 -50 8 -75 40 -40 98 2 89 64 -8 57 -68 64 -97  11z " />     
+
+        <path  d="M3002 1465 c-40 -41 -86 -96 -103 -121 -28 -45 -29 -43 -29 50 0 90
+        -3 96 -55 102 -49 6 -55 0 -55 -51 0 -95 -49 -229 -127 -351 -122 -191 -143
+        -142 -68 151 34 133 39 184 23 210 -46 73 -79 51 -104 -71 -24 -115 -185 -404
+        -226 -404 -30 0 -21 97 23 244 54 182 47 264 -23 272 -49 6 -53 0 -64 -97 -12
+        -99 -67 -217 -149 -318 -39 -48 -39 -47 -11 130 32 203 25 259 -37 276 -64 16
+        -77 0 -77 -94 0 -96 -67 -245 -157 -353 -86 -102 -92 -69 -29 168 59 225 54
+        276 -26 288 -33 5 -42 -14 -63 -124 -14 -75 -54 -179 -94 -247 -140 -240 -181
+        -204 -113 99 35 156 40 205 21 227 -47 57 -72 27 -115 -139 -95 -361 -19 -521
+        158 -330 50 55 72 68 65 42 -39 -147 98 -160 220 -21 l90 103 -20 -87 c-14
+        -65 -49 -119 -136 -209 -195 -204 -277 -433 -184 -517 138 -125 315 90 414
+        507 25 102 56 174 98 224 l61 74 10 -94 c14 -133 90 -144 197 -28 70 76 73 78
+        76 31 9 -158 151 -131 268 51 l31 48 0 -71 c0 -76 35 -135 80 -135 20 0 28 26
+        28 87 0 102 86 287 188 404 95 110 103 81 31 -113 -91 -247 -82 -378 25 -378
+        73 0 329 356 285 397 -8 7 -18 4 -22 -7 -23 -58 -180 -298 -200 -304 -46 -15
+        -41 51 15 225 101 314 48 426 -120 254z m-1233 -786 c-68 -202 -130 -308 -185" />  
+
+        <path  d="M4534 1940 c-64 -51 -134 -199 -195 -415 -50 -177 -72 -199 -180
+        -175 -214 47 -155 490 65 490 42 0 58 -12 68 -50 15 -60 48 -66 48 -9 0 122
+        -198 183 -310 96 -223 -176 -139 -547 129 -572 66 -7 101 -19 101 -37 0 -33
+        -95 -330 -115 -362 -15 -22 -127 -74 -134 -62 -1 3 -11 33 -22 66 -47 142
+        -284 99 -313 -57 -45 -239 321 -313 538 -109 104 97 666 -185 666 -335 0 -48
+        38 -33 52 21 39 156 -219 367 -526 431 l-106 22 29 55 c16 30 48 130 71 223
+        40 155 52 177 168 300 187 198 266 378 211 480 -29 55 -175 54 -245 -1z m202
+        -87 c9 -104 -98 -291 -225 -393 -36 -29 -37 -26 -23 50 56 309 231 552 248
+        343z m-788 -958 c17 -28 14 -50 -14 -98 -43 -75 -33 -92 29 -49 74 51 112 41
+        59 -16 -91 -97 -221 -77 -250 37 -31 125 112 227 176 126z"/>
+
+        <path  d="M4755 1473 c-144 -134 -203 -469 -98 -555 92 -74 224 -32 321 102 59
+        82 82 84 82 9 0 -177 227 -196 355 -29 43 57 165 269 165 287 0 30 -38 10 -49
+        -25 -57 -179 -250 -365 -303 -292 -61 83 -37 141 83 200 124 60 184 148 162
+        236 -49 193 -275 138 -373 -91 -139 -323 -340 -485 -340 -275 0 71 7 80 90
+        120 157 76 215 207 139 316 -44 62 -165 61 -234 -3z m225 -115 c0 -63 -70
+        -146 -144 -169 -59 -19 -63 -1 -17 90 83 161 161 200 161 79z m460 -7 c0 -61
+        -128 -171 -199 -171 -27 0 48 153 105 215 47 52 94 30 94 -44z"/>
+        </g>
+    </svg>
+
+            
+
+    <svg class="signature" version="1.0" xmlns="http://www.w3.org/2000/svg"
+     width="1000pt" height="1000pt" viewBox="0 0 700.000000 1000.000000"
+     preserveAspectRatio="xMidYMid meet">
+
+        <g class="signature__inner" transform="translate(0.000000,600.000000) scale(0.100000,-0.100000)">
+
+        <path class = "signature__path1" d="M963 1917 c-307 -148 -539 -499 -432 -653 43 -61 70 -55 57 13 -23
+        113 199 389 440 546 194 127 214 81 125 -288 l-47 -195 -155 -161 c-271 -285
+        -339 -601 -139 -651 187 -47 352 311 517 1120 65 319 -66 415 -366 269z m58
+        -861 c-110 -366 -167 -469 -231 -416 -81 67 -8 285 161 476 116 131 125 124 70 -60z"/>      
+
+         <path class = "signature__path2" d=" M1439 1619 c-18 -35 -17 -50 8 -75 40 -40 98 2 89 64 -8 57 -68 64 -97  11z"/>     
+
+        <path class = "signature__path3" d="M3002 1465 c-40 -41 -86 -96 -103 -121 -28 -45 -29 -43 -29 50 0 90
+        -3 96 -55 102 -49 6 -55 0 -55 -51 0 -95 -49 -229 -127 -351 -122 -191 -143
+        -142 -68 151 34 133 39 184 23 210 -46 73 -79 51 -104 -71 -24 -115 -185 -404
+        -226 -404 -30 0 -21 97 23 244 54 182 47 264 -23 272 -49 6 -53 0 -64 -97 -12
+        -99 -67 -217 -149 -318 -39 -48 -39 -47 -11 130 32 203 25 259 -37 276 -64 16
+        -77 0 -77 -94 0 -96 -67 -245 -157 -353 -86 -102 -92 -69 -29 168 59 225 54
+        276 -26 288 -33 5 -42 -14 -63 -124 -14 -75 -54 -179 -94 -247 -140 -240 -181
+        -204 -113 99 35 156 40 205 21 227 -47 57 -72 27 -115 -139 -95 -361 -19 -521
+        158 -330 50 55 72 68 65 42 -39 -147 98 -160 220 -21 l90 103 -20 -87 c-14
+        -65 -49 -119 -136 -209 -195 -204 -277 -433 -184 -517 138 -125 315 90 414
+        507 25 102 56 174 98 224 l61 74 10 -94 c14 -133 90 -144 197 -28 70 76 73 78
+        76 31 9 -158 151 -131 268 51 l31 48 0 -71 c0 -76 35 -135 80 -135 20 0 28 26
+        28 87 0 102 86 287 188 404 95 110 103 81 31 -113 -91 -247 -82 -378 25 -378
+        73 0 329 356 285 397 -8 7 -18 4 -22 -7 -23 -58 -180 -298 -200 -304 -46 -15
+        -41 51 15 225 101 314 48 426 -120 254z m-1233 -786 c-68 -202 -130 -308 -185" />  
+
+        <path class = "signature__path4" d="M4534 1940 c-64 -51 -134 -199 -195 -415 -50 -177 -72 -199 -180
+        -175 -214 47 -155 490 65 490 42 0 58 -12 68 -50 15 -60 48 -66 48 -9 0 122
+        -198 183 -310 96 -223 -176 -139 -547 129 -572 66 -7 101 -19 101 -37 0 -33
+        -95 -330 -115 -362 -15 -22 -127 -74 -134 -62 -1 3 -11 33 -22 66 -47 142
+        -284 99 -313 -57 -45 -239 321 -313 538 -109 104 97 666 -185 666 -335 0 -48
+        38 -33 52 21 39 156 -219 367 -526 431 l-106 22 29 55 c16 30 48 130 71 223
+        40 155 52 177 168 300 187 198 266 378 211 480 -29 55 -175 54 -245 -1z m202
+        -87 c9 -104 -98 -291 -225 -393 -36 -29 -37 -26 -23 50 56 309 231 552 248
+        343z m-788 -958 c17 -28 14 -50 -14 -98 -43 -75 -33 -92 29 -49 74 51 112 41
+        59 -16 -91 -97 -221 -77 -250 37 -31 125 112 227 176 126z"/>
+
+        <path class = "signature__path5" d="M4755 1473 c-144 -134 -203 -469 -98 -555 92 -74 224 -32 321 102 59
+        82 82 84 82 9 0 -177 227 -196 355 -29 43 57 165 269 165 287 0 30 -38 10 -49
+        -25 -57 -179 -250 -365 -303 -292 -61 83 -37 141 83 200 124 60 184 148 162
+        236 -49 193 -275 138 -373 -91 -139 -323 -340 -485 -340 -275 0 71 7 80 90
+        120 157 76 215 207 139 316 -44 62 -165 61 -234 -3z m225 -115 c0 -63 -70
+        -146 -144 -169 -59 -19 -63 -1 -17 90 83 161 161 200 161 79z m460 -7 c0 -61
+        -128 -171 -199 -171 -27 0 48 153 105 215 47 52 94 30 94 -44z"/>
+        </g>
+    </svg>
+
+     <svg class = "svg_main" version="1.0" xmlns="http://www.w3.org/2000/svg"
+     width="1000pt" height="1000pt" viewBox="0 0 700.000000 1000.000000"
+     preserveAspectRatio="xMidYMid meet">
+
+        <use xlink:href="#logo" class="neon-wash" stroke="#fff" />
+    </svg> 
+</div>
 </body>
 </html>
+
