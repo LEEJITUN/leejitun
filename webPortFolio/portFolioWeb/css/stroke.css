@@ -7,7 +7,7 @@ body {
     top: 0%;
     left: 50%;
     margin-top: -10px;
-    margin-left: -400px;
+    margin-left: -300px;
     width: 1500;
     height: 100%; 
 }
@@ -26,33 +26,33 @@ body {
 .signature__path1 {
 /*   stroke: #fdc95d;*/
    stroke:  #fff;
-   stroke-width: 30;
+   stroke-width: 35;
    stroke-linecap: round;
    stroke-linejoin: round; 
 }
 
 .signature__path2 {
     stroke: #fff;
-    stroke-width: 30;
+    stroke-width: 35;
     stroke-linecap: round;
     stroke-linejoin: round;
 }
 
 .signature__path3 {
     stroke:  #fff  ;
-    stroke-width: 30;
+    stroke-width: 35;
     stroke-linecap: round;
     stroke-linejoin: round;
 }
 .signature__path4 {
     stroke:  #fff ;
-    stroke-width: 30;
+    stroke-width: 35;
     stroke-linecap: round;
     stroke-linejoin: round;
 }
 .signature__path5 {
     stroke:  #fff;
-    stroke-width: 30;
+    stroke-width: 35;
     stroke-linecap: round;
     stroke-linejoin: round;
     
